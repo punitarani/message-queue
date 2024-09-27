@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "message-queue"
+version = "0.1.0"
+description = ""
+authors = ["Punit Arani <punitsai36@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aio-pika = "^9.4.3"
+asyncpg = "^0.29.0"
+fastapi = "^0.115.0"
+pydantic = "^2.9.2"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.35"}
+uvicorn = "^0.30.6"
+
+
+[tool.poetry.group.dev.dependencies]
+aiohttp = "^3.10.6"
+black = "^24.8.0"
+isort = "^5.13.2"
+numpy = "^2.1.1"
+ruff = "^0.6.8"
+tqdm = "^4.66.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

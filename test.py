@@ -73,7 +73,7 @@ def calculate_percentile(data, percentile):
 # Parameters for the stress test
 TARGET_URL = "http://localhost:80/order/place"
 INITIAL_RPS = 100
-MAX_CONCURRENT_TASKS = 8192 # Max nginx workers
+MAX_CONCURRENT_TASKS = 1024 # Max nginx workers
 
 # Run the stress test
 max_rps, results, rps_history = asyncio.run(stress_test(TARGET_URL, INITIAL_RPS, MAX_CONCURRENT_TASKS))
